@@ -6,19 +6,20 @@
     background: image-url('slide-cover-content.png') top center;
     background-size: cover;
   }
-
-  h2.cta {
-    line-height: 2rem;
-    letter-spacing: 0.02rem;
-    font-weight: normal;
-  }
 }
 
 .slide-1 {
   background: image-url('slide-1-bg.png') top center;
   background-size: cover;
+}
 
-  .items {
-    height: 5rem;
-  }
+.slide-1 .items,
+.slide-2 .items {
+  height: 5rem;
+}
+
+h2.cta {
+  line-height: 2rem;
+  letter-spacing: 0.02rem;
+  font-weight: normal;
 }
