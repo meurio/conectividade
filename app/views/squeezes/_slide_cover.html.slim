@@ -1,0 +1,31 @@
+.slide-cover.pt3
+  .container.col-12
+    .content
+      .clearfix
+        .sm-col.sm-col-12.md-col-3.md-show.p4
+          span LIKE
+        .sm-col.sm-col-12.md-col-6
+          .center.py3.mt4
+            = image_tag('logo-internetnaescola.png')
+        .sm-col.sm-col-12.md-col-2
+          .bg-red.white
+            .center.regular.p2
+              h1.m0.mt3 1453
+              h3.regular.m0 PESSOAS
+              h4.regular.m0 PRESSIONANDO
+        .col.md-col-1
+      .clearfix
+        .col-10.md-col-8.mx-auto
+          h2.cta.gray.mb4.center Pátria educadora se faz com internet rápida na escola! Envie um e-mail à presidenta Dilma para que todas as escolas do Brasil recebam pelo menos 10 mega até 2016!
+  .bg-yellow
+    .container.col-11.lg-col-12.py2
+      .clearfix
+        = form_tag('/', class: 'mxn2')
+          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+            = text_field_tag(:first_name, nil, class: ['field', 'col-12'], placeholder: 'Nome')
+          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+            = text_field_tag(:last_name, nil, class: ['field', 'col-12'], placeholder: 'Sobrenome')
+          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+            = text_field_tag(:email, nil, class: ['field', 'col-12'], placeholder: 'Email')
+          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+            = submit_tag 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
