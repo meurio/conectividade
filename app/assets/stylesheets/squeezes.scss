@@ -1,3 +1,16 @@
-// Place all the styles related to the squeezes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.slide-1 {
+  .content {
+    background: image-url('macbook.png') top center;
+    background-size: cover;
+  }
+
+  h2.cta {
+    line-height: 2rem;
+    letter-spacing: 0.02rem;
+    font-weight: normal;
+  }
+}
+
+.btn-primary.rounded {
+  border-radius: 2rem;
+}
