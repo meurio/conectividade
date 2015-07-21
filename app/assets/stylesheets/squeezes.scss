@@ -1,6 +1,9 @@
 .slide-1 {
+  background: image-url('slide-1-bg.png') top center;
+  background-size: cover;
+
   .content {
-    background: image-url('macbook.png') top center;
+    background: image-url('slide-1-cover.png') top center;
     background-size: cover;
   }
 
