@@ -18,6 +18,21 @@
   height: 5rem;
 }
 
+.slide-3 {
+  .content-1 {
+    background: image-url('slide-3-manoel.png') top center;
+    background-size: cover;
+  }
+
+  .content-2 {
+    background: image-url('slide-3-izabel.png') top center;
+    background-size: cover;
+  }
+
+  .items { height: 12rem; }
+  .slick-dots { bottom: 1rem; }
+}
+
 .slide-4 {
   .pattern-1 {
     background: image-url('slide-4-pattern1.png') top center no-repeat;

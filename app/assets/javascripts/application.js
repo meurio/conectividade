@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require slick
 //= require_tree .
+
+$(function(){
+  $('.slick').slick();
+});

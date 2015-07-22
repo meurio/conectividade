@@ -10,6 +10,15 @@ $black: #223947;
 $button-background-color: $red;
 
 @import 'basscss/basscss';
+
+/* SLICK Overrides */
+$slick-dot-color: white;
+$slick-dot-size: $h4;
+
+@import 'slick';
+@import 'slick-theme';
+
+/* App Styles */
 @import 'fonts';
 @import 'squeezes';
 
