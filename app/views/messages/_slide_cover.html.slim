@@ -20,12 +20,13 @@
   .bg-yellow
     .container.col-11.lg-col-12.py2
       .clearfix
-        = form_tag('/', class: 'mxn2')
+        = form_for(@message, class: 'mxn2') do |f|
+          = f.fields_for :user do |user_form|
+            .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+              = user_form.text_field(:first_name, class: ['field', 'col-12'], placeholder: 'Nome')
+            .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+              = user_form.text_field(:last_name, class: ['field', 'col-12'], placeholder: 'Sobrenome')
+            .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
+              = user_form.email_field(:email, class: ['field', 'col-12'], placeholder: 'Email')
           .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-            = text_field_tag(:first_name, nil, class: ['field', 'col-12'], placeholder: 'Nome')
-          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-            = text_field_tag(:last_name, nil, class: ['field', 'col-12'], placeholder: 'Sobrenome')
-          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-            = text_field_tag(:email, nil, class: ['field', 'col-12'], placeholder: 'Email')
-          .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-            = submit_tag 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
+            = f.submit 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
