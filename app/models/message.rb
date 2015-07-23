@@ -4,7 +4,7 @@ class Message < ActiveRecord::Base
 
   validates :user_id, presence: true
 
-  after_create { AppMailer.thanks(self).deliver_later }
+  after_create { AppMailer.delay.thanks(self) }
   after_create { self.delay.add_to_mailchimp_segment }
 
   def add_to_mailchimp_segment
