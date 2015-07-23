@@ -4,5 +4,5 @@ class Message < ActiveRecord::Base
 
   validates :user_id, presence: true
 
-  after_create { AppMailer.thanks(self).deliver_now }
+  after_create { AppMailer.thanks(self).deliver_later }
 end
