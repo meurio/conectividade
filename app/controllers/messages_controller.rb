@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   def index
-    @users_count = User.count
+    @users_count = User.joins(:messages).uniq.count
     @message = Message.new
     @message.build_user
   end
