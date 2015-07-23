@@ -66,13 +66,13 @@ Rails.application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV["MANDRILL_USERNAME"],
-    :password => ENV["MANDRILL_APIKEY"],
-    :domain => "internetnaescola.org",
-    :address => "smtp.mandrillapp.com",
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    user_name: ENV["SENDGRID_USERNAME"],
+    password: ENV["SENDGRID_PASSWORD"],
+    domain: 'internetnaescola.org',
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
