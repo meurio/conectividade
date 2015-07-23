@@ -22,7 +22,7 @@ class Message < ActiveRecord::Base
       Gibbon::API.lists.static_segment_members_add(
         id: ENV["MAILCHIMP_LIST_ID"],
         seg_id: ENV["MAILCHIMP_MESSAGES_SEG_ID"],
-        batch: [{ email: self.email }]
+        batch: [{ email: self.user.email }]
       )
     rescue Exception => e
       Rails.logger.error e
