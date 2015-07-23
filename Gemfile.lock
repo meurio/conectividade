@@ -48,6 +48,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.5.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
     globalid (0.3.5)
@@ -60,7 +65,6 @@ GEM
     json (1.8.3)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
-    machinist (2.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
@@ -169,9 +173,9 @@ PLATFORMS
 DEPENDENCIES
   basscss-rails
   byebug
+  factory_girl_rails
   faker
   jquery-rails
-  machinist
   pg
   puma
   rails (= 4.2.3)
