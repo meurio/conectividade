@@ -13,6 +13,7 @@ gem 'slick_rails'
 gem 'puma'
 gem 'rails_12factor', group: :production
 
+gem 'gibbon'
 gem 'mailcatcher', group: :development
 gem 'sidekiq'
 
