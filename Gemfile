@@ -13,6 +13,8 @@ gem 'slick_rails'
 gem 'puma'
 gem 'rails_12factor', group: :production
 
+gem 'mailcatcher', group: :development
+
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
