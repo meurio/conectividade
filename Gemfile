@@ -14,6 +14,7 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 
 gem 'mailcatcher', group: :development
+gem 'sidekiq'
 
 group :development, :test do
   gem 'byebug'
