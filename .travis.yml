@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.2.2
+
+before_script:
+  - "cp config/database.sample.yml config/database.yml"
+  - "psql -c 'create role conectividade SUPERUSER LOGIN;' postgres"
+  - "psql -c 'create database conectividade_test;' -U conectividade postgres"
+
+script: "bundle exec rake db:migrate && bundle exec rake db:test:prepare && bundle exec rspec spec"
+
+branches:
+  only:
+    - master
