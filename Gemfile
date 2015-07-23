@@ -15,7 +15,10 @@ gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
+  gem 'faker'
+  gem 'machinist'
   gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
