@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SqueezesController, type: :controller do
+RSpec.describe MessagesController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
