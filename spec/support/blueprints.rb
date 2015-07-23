@@ -5,3 +5,7 @@ User.blueprint do
   last_name  { Faker::Name.first_name }
   email      { Faker::Internet.email }
 end
+
+Message.blueprint do
+  user
+end
