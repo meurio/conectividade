@@ -5,4 +5,27 @@ class Message < ActiveRecord::Base
   validates :user_id, presence: true
 
   after_create { AppMailer.thanks(self).deliver_later }
+  after_create { self.delay.add_to_mailchimp_segment }
+
+  def add_to_mailchimp_segment
+    begin
+      Gibbon::API.lists.subscribe(
+        id: ENV["MAILCHIMP_LIST_ID"],
+        email: { email: self.user.email },
+        merge_vars: {
+          FNAME: self.user.first_name,
+          LNAME: self.user.last_name
+        },
+        double_optin: false,
+        update_existing: true
+      )
+      Gibbon::API.lists.static_segment_members_add(
+        id: ENV["MAILCHIMP_LIST_ID"],
+        seg_id: ENV["MAILCHIMP_MESSAGES_SEG_ID"],
+        batch: [{ email: self.email }]
+      )
+    rescue Exception => e
+      Rails.logger.error e
+    end
+  end
 end
