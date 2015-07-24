@@ -16,11 +16,17 @@
         .col.md-col-1
       .clearfix
         .col-10.md-col-8.mx-auto
-          h2.cta.gray.mb4.center Pátria educadora se faz com internet rápida na escola! Envie um e-mail à presidenta Dilma para que todas as escolas do Brasil recebam pelo menos 10 mega até 2016!
+          h2.cta.gray.mb3.center Pátria educadora se faz com internet rápida na escola! Envie um e-mail à presidenta Dilma para que todas as escolas do Brasil recebam pelo menos 10 mega até 2016!
+        .col-10.mx-auto
+          p.mb2
+            = link_to '#email-preview', class: 'gray fancybox' do
+              | Quero ver o email
+              br
+              | que será enviado
   .bg-yellow
     .container.col-11.lg-col-12.py2
       .clearfix
-        = form_for(@message, class: 'mxn2') do |f|
+        = form_for(@message, remote: true, class: 'mxn2') do |f|
           = f.fields_for :user do |user_form|
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
               = user_form.text_field(:first_name, placeholder: 'Nome', required: true, class: ['field', 'col-12'])
@@ -30,3 +36,33 @@
               = user_form.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
           .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
             = f.submit 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
+
+.display-none
+  #email-preview
+    .container
+      .col-10.mx-auto
+        h5.center Veja abaixo o e-mail que será enviado em seu nome para a presidenta Dilma e os ministros X, Y e Z.
+        h4 Assunto: Na pátria educadora, a melhor internet da cidade deve estar na escola!
+
+        p Exma. Sra. Presidenta Dilma Roussef,
+
+        p Educação deve ser a maior prioridade na construção de um país com igualdade social, desenvolvimento e crescimento econômico. Mas é impossível se pensar em educação de qualidade sem acesso à internet nas escolas.
+
+        p Temos hoje muitas pessoas e organizações produzindo conteúdo pedagógico online de qualidade - e de graça -  mas de que adianta se o material não chega em quem mais precisa?
+
+        p Hoje, apenas 19% das escolas públicas brasileiras tem conexão superior a 2 Mbps (dados do TIC Educação 2013). No entanto, o acesso a diversos conteúdos educativos como vídeo aulas necessitam de pelo menos 8 Mbps, o que significa que 81% das escolas não tem internet com velocidade adequada. Consideramos que 10 Mega é o mínimo para que alunos e professores se beneficiem dos recursos pedagógicos já disponíveis online.
+
+        p A distribuição da infraestrutura para acesso à internet deve ser uma política prioritária do governo federal. Conteúdo e vontade de aprender não faltam no país. Basta que o Governo Federal faça sua parte e conecte esses dois campos.
+
+        p Esperamos um compromisso público dessa Presidência em levar internet rápida para todas as escolas públicas brasileira até 2016. "Pátria Educadora" se faz com internet na escola!
+
+        p Aguardo sua resposta!
+
+        p Para responder publicamente a essa mobilização, envie uma mensagem para resposta@internetnaescola.org
+
+        p Veja nossa plataforma em #{link_to 'http://internetnaescola.org'}
+
+  #compartilhe
+    .container
+      .col-10.mx-auto
+        h2 Compartilhe!

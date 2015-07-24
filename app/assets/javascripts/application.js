@@ -19,4 +19,8 @@
 $(function(){
   $('.slick').slick();
   $('.fancybox').fancybox();
+
+  $('form#new_message').on('submit', function() {
+    $.fancybox.open({ href: '#compartilhe' });
+  });
 });
