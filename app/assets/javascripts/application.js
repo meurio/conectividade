@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require slick
+//= require fancybox/source/jquery.fancybox.pack.js
 //= require_tree .
 
 $(function(){
   $('.slick').slick();
+  $('.fancybox').fancybox();
 });
