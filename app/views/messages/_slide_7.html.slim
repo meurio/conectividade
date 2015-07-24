@@ -6,12 +6,13 @@
         h2.orange ENVIE UM EMAIL À PRESIDENTA DILMA
       .col-10.md-col-8.lg-col-6.mx-auto.center
         h3.regular.white.mb3 Faça você também a sua pressão para que todas as escolas do Brasil recebam no mínimo  10 Mega até 2016. É só usar o formulário abaixo :)
-        = form_tag('/', class: 'mxn2')
-          .col-12.mx-auto.mb1
-            = text_field_tag(:first_name, nil, class: ['field', 'col-12'], placeholder: 'Nome')
-          .col-12.mx-auto.mb1
-            = text_field_tag(:last_name, nil, class: ['field', 'col-12'], placeholder: 'Sobrenome')
-          .col-12.mx-auto.mb3
-            = text_field_tag(:email, nil, class: ['field', 'col-12'], placeholder: 'Email')
+        = form_for(@message, class: 'mxn2') do |f|
+          = f.fields_for :user do |user_form|
+            .col-12.mx-auto.mb1
+              = user_form.text_field(:first_name, class: ['field', 'col-12'], placeholder: 'Nome')
+            .col-12.mx-auto.mb1
+              = user_form.text_field(:last_name, class: ['field', 'col-12'], placeholder: 'Sobrenome')
+            .col-12.mx-auto.mb3
+              = user_form.email_field(:email, class: ['field', 'col-12'], placeholder: 'Email')
           .col-12.mx-auto
-            = submit_tag 'ENVIAR PRESSÃO', class: ['btn', 'btn-primary', 'bg-orange', 'rounded', 'col-12']
+            = f.submit 'ENVIAR PRESSÃO', class: ['btn', 'btn-primary', 'bg-orange', 'rounded', 'col-12']
