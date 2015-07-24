@@ -9,10 +9,10 @@
         = form_for(@message, class: 'mxn2') do |f|
           = f.fields_for :user do |user_form|
             .col-12.mx-auto.mb1
-              = user_form.text_field(:first_name, class: ['field', 'col-12'], placeholder: 'Nome')
+              = user_form.text_field(:first_name, placeholder: 'Nome', required: true, class: ['field', 'col-12'])
             .col-12.mx-auto.mb1
-              = user_form.text_field(:last_name, class: ['field', 'col-12'], placeholder: 'Sobrenome')
+              = user_form.text_field(:last_name, placeholder: 'Sobrenome', required: true, class: ['field', 'col-12'])
             .col-12.mx-auto.mb3
-              = user_form.email_field(:email, class: ['field', 'col-12'], placeholder: 'Email')
+              = user_form.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
           .col-12.mx-auto
             = f.submit 'ENVIAR PRESSÃO', class: ['btn', 'btn-primary', 'bg-orange', 'rounded', 'col-12']

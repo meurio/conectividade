@@ -11,6 +11,7 @@ $navy: #0C5C75;
 $black: #223947;
 
 $button-background-color: $red;
+$field-focus-color: $blue;
 
 @import 'basscss/basscss';
 
@@ -28,3 +29,5 @@ $slick-dot-size: $h4;
 .pt3 { padding-top: 2rem; }
 .light { font-weight: 300; }
 .btn-primary.rounded { border-radius: 2rem; }
+.field:required { border-color: $border-color; }
+.field:required:focus { border-color: $field-focus-color; }

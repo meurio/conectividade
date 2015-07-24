@@ -23,10 +23,10 @@
         = form_for(@message, class: 'mxn2') do |f|
           = f.fields_for :user do |user_form|
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-              = user_form.text_field(:first_name, class: ['field', 'col-12'], placeholder: 'Nome')
+              = user_form.text_field(:first_name, placeholder: 'Nome', required: true, class: ['field', 'col-12'])
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-              = user_form.text_field(:last_name, class: ['field', 'col-12'], placeholder: 'Sobrenome')
+              = user_form.text_field(:last_name, placeholder: 'Sobrenome', required: true, class: ['field', 'col-12'])
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-              = user_form.email_field(:email, class: ['field', 'col-12'], placeholder: 'Email')
+              = user_form.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
           .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
             = f.submit 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
