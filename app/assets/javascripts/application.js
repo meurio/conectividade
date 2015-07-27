@@ -20,7 +20,7 @@ $(function(){
   $('.slick').slick();
 
   $('form#new_message').on('submit', function() {
-    var popup = $('[data-remodal-id="compartilhe"]').remodal();
-    popup.open();
+    $('[data-remodal-id="compartilhe"]').remodal().open();
+    $(this).trigger('reset');
   });
 });
