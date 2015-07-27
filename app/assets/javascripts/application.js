@@ -19,11 +19,6 @@
 $(function(){
   $('.slick').slick();
 
-  $('form#new_message').on('submit', function() {
-    $('[data-remodal-id="compartilhe"]').remodal().open();
-    $(this).trigger('reset');
-  });
-
   $('.data-role-link').on('click', function(e) {
     var role = $(this).data('role');
     $('#cadastro #user_role').val(role);

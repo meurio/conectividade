@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 
     Message.create(user: user)
 
-    redirect_to root_path
+    redirect_to root_path(anchor: 'compartilhe')
   end
 
   private
