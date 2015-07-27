@@ -2,23 +2,14 @@ require 'rails_helper'
 
 RSpec.describe MessagesController, type: :controller do
   describe 'GET #index' do
+    before { get :index }
+
     it 'returns http success' do
-      get :index
       expect(response).to have_http_status(:success)
     end
 
     it 'initializes @message' do
-      get :index
       expect(assigns :message).to be_instance_of(Message)
-    end
-
-    it 'assigns @users_count' do
-      users = create_list(:user, 2)
-      create_list(:message, 2, user: users.first)
-
-      get :index
-
-      expect(assigns :users_count).to eq(1)
     end
   end
 
