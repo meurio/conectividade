@@ -5,5 +5,10 @@
         h1.white.center.mt0 ESPALHE POR AÍ
         h2.cta.blue.mb4.center Quanto mais gente entrar pra nossa luta, maiores são as chances de uma vitória!
       .col-10.mx-auto.center
-        = image_tag('slide-11-facebook.png', class: 'px2')
-        = image_tag('slide-11-twitter.png', class: 'px2')
+        = link_to image_tag('slide-11-facebook.png', class: 'px2'),
+        "https://www.facebook.com/dialog/share?\
+          app_id=#{ENV['FACEBOOK_APP_ID']}\
+          &display=popup\
+          &href=#{URI::encode(root_url)}\
+          &redirect_uri=#{URI::encode(root_url)}", class: 'facebook-share-button'
+        = link_to image_tag('slide-11-twitter.png', class: 'px2'), "https://twitter.com/intent/tweet?url=#{URI::encode(root_url)}&text=#{URI::encode('Junte-se a milhares de pessoas que estão se mobilizando por uma internet rápida em todas as escolas públicas do país:')}", class: 'twitter-share-button'
