@@ -29,5 +29,5 @@ group :development, :test do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-fancybox'
+  gem 'rails-assets-remodal'
 end

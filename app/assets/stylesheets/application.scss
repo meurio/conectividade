@@ -23,7 +23,7 @@ $slick-dot-size: $h4;
 @import 'slick-theme';
 
 /* App Styles */
-@import 'fancybox/source/jquery.fancybox.scss';
+@import 'remodal';
 @import 'fonts';
 @import 'messages';
 
@@ -32,3 +32,6 @@ $slick-dot-size: $h4;
 .btn-primary.rounded { border-radius: 2rem; }
 .field:required { border-color: $border-color; }
 .field:required:focus { border-color: $field-focus-color; }
+.remodal { padding: 0; }
+.remodal-close { color: white; left: auto; top: 0.6rem; right: 0.6rem; }
+.popup-header { height: 3.3rem }

@@ -13,14 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require slick
-//= require fancybox/source/jquery.fancybox.pack.js
+//= require remodal
 //= require_tree .
 
 $(function(){
   $('.slick').slick();
-  $('.fancybox').fancybox();
 
   $('form#new_message').on('submit', function() {
-    $.fancybox.open({ href: '#compartilhe' });
+    var popup = $('[data-remodal-id="compartilhe"]').remodal();
+    popup.open();
   });
 });
