@@ -23,4 +23,29 @@ $(function(){
     $('[data-remodal-id="compartilhe"]').remodal().open();
     $(this).trigger('reset');
   });
+
+  // Share windows
+  $('.facebook-share-button').click(function(event){
+    event.preventDefault();
+    window.open(
+      $(this).attr('href'),
+      'facebook-share-dialog',
+      'height=450, width=550,' +
+      'top=' + ($(window).height() / 2 - 225) + ',' +
+      'left=' + ($(window).width() / 2 - 275) + ',' +
+      'toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+    return false;
+  });
+
+  $('.twitter-share-button').click(function(event){
+    event.preventDefault();
+    window.open(
+      $(this).attr('href'),
+      'twitter-share-dialog',
+      'height=420, width=550,' +
+      'top=' + ($(window).height() / 2 - 210) + ',' +
+      'left=' + ($(window).width() / 2 - 275) + ',' +
+      'toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+    return false;
+  });
 });
