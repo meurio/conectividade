@@ -24,6 +24,11 @@ $(function(){
     $(this).trigger('reset');
   });
 
+  $('.data-role-link').on('click', function(e) {
+    var role = $(this).data('role');
+    $('#cadastro #user_role').val(role);
+  });
+
   // Share windows
   $('.facebook-share-button').click(function(event){
     event.preventDefault();

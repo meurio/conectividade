@@ -5,24 +5,68 @@
         = image_tag('slide-9-header.png')
         h2.navy DIA DA CONECTIVIDADE
       .col-10.md-col-8.lg-col-6.mx-auto.center
-        h3.regular.white.mb3 Seja um puxador do Bonde da Conexão. Organize o Dia da Conectividade na sua escola. Internet, cultura e diversão, simultaneamente, em várias escolas do país. Você vai precisar:
+        h3.regular.white.mb3 Seja um puxador do Bonde da Conexão. Organize o Dia da Conectividade na sua escola. Internet, cultura e diversão, simultaneamente, em várias escolas do país! Você vai precisar:
       .clearfix.col-10.md-col-8.mx-auto
         .col.col-2.px1.right-align
           = image_tag('slide-9-checkbox.png')
         .col.col-10.px2
           h3.white.mt0.mb1 Falar bastante com a gente
-          p.white.mb3 Vamos te mandar dicas de como envolver sua escola e ideias para você agitar. A gente vai estar ao seu lado para te inspirar e te ajudar.
+          p.white.mb3 Vamos te mandar ideias para você agitar e materiais sobre como envolver sua escola. Nós vamos estar ao seu lado para te inspirar e te ajudar.
         .col.col-2.px1.right-align
           = image_tag('slide-9-checkbox.png')
         .col.col-10.px2
-          h3.white.mt0.mb1 De um professor pra te acompanhar
-          p.white.mb3 Ninguém faz nada sozinho. Chame quantos amigos quiser. Mas não se esqueça de escolher um professor bem bacana para ser seu parceiro nessa jornada.
+          h3.white.mt0.mb1 Falar com todo mundo
+          p.white.mb3 Ninguém faz nada sozinho. Se você é aluno, escolha um professor bem bacana pra te ajudar. Se você é educador, agite seus alunos!
         .col.col-2.px1.right-align
           = image_tag('slide-9-checkbox.png')
         .col.col-10.px2
-          h3.white.mt0.mb1 Por a mão na massa e aproveitar!
-          p.white.mb3 Organizar um evento dá trabalho e aqui você é quem apita. Mas relaxa, se cada um fizer um pouquinho nossa mobilização fica linda. \o/
+          h3.white.mt0.mb1 Fazer um pouco, junto com muitos!
+          p.white.mb4 Serão muitas vozes em escolas de todo o país. Cada um fazendo a sua parte para espalharmos nossa mensagem pelo Brasil! \o/
 
-        .center
-          = link_to 'QUERO PUXAR ESSE BONDE!', '#', class: ['btn', 'btn-primary', 'rounded', 'py1', 'bg-navy']
-          p.white.mt3 Você é professor? #{link_to 'Clique aqui', '#', class: ['white']}
+        .col-10.mx-auto.center.mxn2
+          h3.mb3.white Inscreva-se para receber todas as informações!
+          = link_to 'SOU ALUNO', '#cadastro', data: { role: 'student' }, class: ['btn', 'btn-primary', 'rounded', 'py1', 'm2', 'col-8', 'md-col', 'md-col-5', 'bg-navy', 'data-role-link']
+          = link_to 'SOU EDUCADOR', '#cadastro', data: { role: 'teacher' }, class: ['btn', 'btn-primary', 'rounded', 'py1', 'm2', 'col-8', 'md-col', 'md-col-5', 'bg-navy', 'data-role-link']
+
+  #cadastro.remodal data-remodal-id="cadastro"
+    .container
+      .col-12.popup-header.bg-blue
+        button.remodal-close data-remodal-action="close"
+        = image_tag('popup-header-blue.png', class: 'mt1')
+      .py3
+        .col-10.mx-auto.center
+          h2 Nosso bonde prestes a largar!
+          p.gray Que legal que você quer puxar o Bonde da Conexão na sua escola. Deixe seu contato para a gente te mandar os próximos passos dessa ação. Se você usar Whatsapp, fica ainda mais fácil trocar ideias!
+        .col-10.mx-auto.center
+          = form_for(@user, class: 'mnx2') do |f|
+            = f.hidden_field(:role, id: :user_role)
+            .col.col-12.md-col-6.mx-auto.mb2.px1
+              = f.text_field(:first_name, placeholder: 'Nome', required: true, class: ['field', 'col-12'])
+            .col.col-12.md-col-6.mx-auto.mb2.px1
+              = f.text_field(:last_name, placeholder: 'Sobrenome', required: true, class: ['field', 'col-12'])
+            .col.col-9.md-col-10.mx-auto.mb2.px1
+              = f.text_field(:school, placeholder: 'Escola', required: true, class: ['field', 'col-12'])
+            .col.col-3.md-col-2.mx-auto.mb2.px1
+              = f.text_field(:age, placeholder: 'Idade', required: true, class: ['field', 'col-12'])
+            .col.col-12.mx-auto.mb2.px1
+              = f.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
+            .col.col-3.md-col-2.mx-auto.mb2.px1
+              = f.text_field(:state, placeholder: 'Estado', required: true, class: ['field', 'col-12'])
+            .col.col-9.md-col-10.mx-auto.mb2.px1
+              = f.text_field(:city, placeholder: 'Cidade', required: true, class: ['field', 'col-12'])
+            .col.col-3.md-col-2.mx-auto.mb2.px1
+              = f.text_field(:area_code, placeholder: 'DDD', required: true, class: ['field', 'col-12'])
+            .col.col-9.md-col-10.mx-auto.mb3.px1
+              = f.text_field(:phone, placeholder: 'Whatsapp / Celular', required: true, class: ['field', 'col-12'])
+            .col-12.mx-auto
+              = f.submit 'ENVIAR', class: ['btn', 'btn-primary', 'bg-blue', 'rounded', 'col-8']
+
+  #obrigado.remodal data-remodal-id="obrigado"
+    .container
+      .col-12.popup-header.bg-blue
+        button.remodal-close data-remodal-action="close"
+        = image_tag('popup-header-blue.png', class: 'mt1')
+      .py3
+        .col-10.mx-auto.center
+          h2 Oba, já estamos juntos!
+          p.gray Vamos entrar em contato com você! ;)
