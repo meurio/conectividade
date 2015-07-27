@@ -19,7 +19,7 @@
           h2.cta.gray.mb3.center Pátria educadora se faz com internet rápida na escola! Envie um e-mail à presidenta Dilma para que todas as escolas do Brasil recebam pelo menos 10 mega até 2016!
         .col-10.mx-auto
           p.mb2
-            = link_to '#email-preview', class: 'gray fancybox' do
+            = link_to '#email-preview', class: 'gray' do
               | Quero ver o email
               br
               | que será enviado
@@ -38,19 +38,21 @@
             = f.submit 'ENVIAR', class: ['btn', 'btn-primary', 'rounded', 'col-12']
 
 .display-none
-  #email-preview
+  #email-preview.remodal data-remodal-id="email-preview"
     .container
-      .col-10.mx-auto
-        h5.center Veja abaixo o e-mail que será enviado em seu nome para a presidenta Dilma e os ministros X, Y e Z.
+      button.remodal-close data-remodal-action="close"
+      .col-10.mx-auto.p3
+        strong.center Veja abaixo o e-mail que será enviado em seu nome para a presidenta Dilma e os ministros das Telecomunicações, da Educação e da Casa Civil.
+
         h4 Assunto: Na pátria educadora, a melhor internet da cidade deve estar na escola!
 
-        p Exma. Sra. Presidenta Dilma Roussef,
+        p Exma. Sra. Presidenta Dilma Roussef e Ministros Ricardo Berzoini, Renato Janine Ribeiro e Aloizio Mercadante.
 
         p Educação deve ser a maior prioridade na construção de um país com igualdade social, desenvolvimento e crescimento econômico. Mas é impossível se pensar em educação de qualidade sem acesso à internet nas escolas.
 
         p Temos hoje muitas pessoas e organizações produzindo conteúdo pedagógico online de qualidade - e de graça -  mas de que adianta se o material não chega em quem mais precisa?
 
-        p Hoje, apenas 19% das escolas públicas brasileiras tem conexão superior a 2 Mbps (dados do TIC Educação 2013). No entanto, o acesso a diversos conteúdos educativos como vídeo aulas necessitam de pelo menos 8 Mbps, o que significa que 81% das escolas não tem internet com velocidade adequada. Consideramos que 10 Mega é o mínimo para que alunos e professores se beneficiem dos recursos pedagógicos já disponíveis online.
+        p Hoje, apenas 19% das escolas públicas brasileiras tem conexão superior a 2 Mbps (dados do #{link_to 'TIC Educação 2013', 'http://www.cetic.br/media/docs/publicacoes/2/tic-educacao-2013.pdf', target: :blank}). No entanto, o acesso a diversos conteúdos educativos como vídeo aulas necessitam de pelo menos 8 Mbps, o que significa que 81% das escolas não tem internet com velocidade adequada. Consideramos que 10 Mega é o mínimo para que alunos e professores se beneficiem dos recursos pedagógicos já disponíveis online.
 
         p A distribuição da infraestrutura para acesso à internet deve ser uma política prioritária do governo federal. Conteúdo e vontade de aprender não faltam no país. Basta que o Governo Federal faça sua parte e conecte esses dois campos.
 
@@ -60,11 +62,17 @@
 
         p Para responder publicamente a essa mobilização, envie uma mensagem para resposta@internetnaescola.org
 
-        p Veja nossa plataforma em #{link_to 'http://internetnaescola.org'}
+        p Veja nossa plataforma em #{link_to 'http://internetnaescola.org', 'http://internetnaescola.org'}
 
-  #compartilhe
+        .center
+          = link_to 'QUERO ENVIAR!', '#', class: ['btn', 'btn-primary', 'rounded', 'py1'], data: { 'remodal-confirm': true }
+
+  #compartilhe.remodal data-remodal-id="compartilhe"
     .container
-      .col-10.md-col-6.mx-auto.center
+      .col-12.popup-header.bg-yellow
+        button.remodal-close data-remodal-action="close"
+        = image_tag('popup-header-yellow.png', class: 'mt1')
+      .col-10.md-col-6.mx-auto.center.py3
         h2 E-mail enviado! ;)
         p.gray Oba, você mandou o seu recado para a presidenta Dilma. Agora, conte para todos os seus amigos e ajude a aumentar a força dessa mobilização!
         = image_tag('slide-11-facebook.png', class: 'px2')
