@@ -6,7 +6,7 @@ class AppMailer < ActionMailer::Base
     headers "X-SMTPAPI" => "{ \"category\": [\"conectividade\", \"thanks\"] }"
     mail(
       to: @message.user.email,
-      subject: 'Boa, seu recado para a Presidência da República foi enviado!'
+      subject: 'Boa, seu pedido para a presidenta Dilma e para os Ministros foi enviado!'
     )
   end
 end
