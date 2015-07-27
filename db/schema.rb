@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723005349) do
+ActiveRecord::Schema.define(version: 20150727194334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20150723005349) do
     t.string   "email",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "role"
+    t.string   "school"
+    t.integer  "age"
+    t.string   "state"
+    t.string   "city"
+    t.string   "area_code"
+    t.string   "phone"
   end
 
   add_foreign_key "messages", "users"
