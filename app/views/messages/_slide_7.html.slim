@@ -18,5 +18,7 @@
               = user_form.text_field(:last_name, placeholder: 'Sobrenome', required: true, class: ['field', 'col-12'])
             .col-12.mx-auto.mb3
               = user_form.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
-          .col-12.mx-auto
+          .col-12.mx-auto.mb2
             = f.submit 'PEÇA PARA A DILMA!', class: ['btn', 'btn-primary', 'bg-orange', 'rounded', 'col-12']
+          .col-12.mx-auto
+            = link_to 'Quero ver o email que será enviado', '#email-preview', class: 'orange'
