@@ -1,10 +1,14 @@
 .slide-cover {
-  background: image-url('slide-cover-bg.png') top center;
-  background-size: cover;
+  .back {
+    background: image-url('slide-cover-bg.png') top center;
+    background-size: cover;
+    z-index: -2;
+  }
 
-  .content {
+  .macbook {
     background: image-url('slide-cover-content.png') top center;
     background-size: cover;
+    z-index: -1;
   }
 }
 

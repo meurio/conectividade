@@ -1,11 +1,14 @@
-.slide-cover.pt3
-  .container.col-12
+.slide-cover.pt3.relative
+  .back.absolute.top-0.right-0.bottom-0.left-0.md-show
+  .container.col-12.relative
+    .macbook.absolute.top-0.right-0.bottom-0.left-0.md-show
     .content
       .clearfix
         .sm-col.sm-col-12.md-col-3.md-show.p4
           .fb-like.ml1 data-href="#{root_url}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"
         .sm-col.sm-col-12.md-col-6
-          .center.py3.mt4
+          .md-show.mt4
+          .center.py2
             = image_tag('logo-internetnaescola.png')
         .sm-col.sm-col-12.md-col-2
           .bg-red.white
