@@ -20,4 +20,27 @@ class AppMailer < ActionMailer::Base
       subject: 'Na pátria educadora, a melhor internet da cidade deve estar na escola!'
     )
   end
+
+  def user_registered user
+    self.student_registered(user) if user.student?
+    self.teacher_registered(user) if user.teacher?
+  end
+
+  def student_registered user
+    headers "X-SMTPAPI" => "{ \"category\": [\"conectividade\", \"student_registered\"] }"
+    mail(
+      to: user.email,
+      template_name: 'student_registered',
+      subject: 'Boa, agora você é um puxador do Bonde da Conexão!'
+    )
+  end
+
+  def teacher_registered user
+    headers "X-SMTPAPI" => "{ \"category\": [\"conectividade\", \"teacher_registered\"] }"
+    mail(
+      to: user.email,
+      template_name: 'teacher_registered',
+      subject: 'Você está se juntando a pessoas de todo o país por uma internet rápida na escola.'
+    )
+  end
 end

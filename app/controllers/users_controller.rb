@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     end
 
     if user.save
+      AppMailer.delay.user_registered(user)
       redirect_to root_path(anchor: 'obrigado')
     end
   end
