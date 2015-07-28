@@ -1,4 +1,4 @@
-if Rails.env.production?
+if Rails.env.production? && ENV["LIVE"]
   PRESIDENT_EMAIL = "Dilma Roussef <email@dilma>"
   MINISTERS_EMAILS = [
     "Ricardo Berzoini <email@ministro>",
