@@ -13,8 +13,14 @@
   background-size: cover;
 }
 
-.slide-1 .items,
+.slide-1 .items {
+  height: 8rem;
+}
+
 .slide-2 .items {
+  height: 10rem;
+}
+.slide-2 .items-secondary {
   height: 5rem;
 }
 
@@ -47,6 +53,10 @@
 .slide-5 {
   background: image-url('slide-5-bg.png') top center;
   background-size: cover;
+}
+
+.slide-7 {
+  background-color: #F6DF6B;
 }
 
 h2.cta {

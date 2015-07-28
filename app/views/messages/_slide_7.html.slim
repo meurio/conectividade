@@ -1,11 +1,15 @@
-#pedido.slide-7.bg-yellow
+#pedido.slide-7
   .container.py4
     .clearfix
-      .col-10.mx-auto.center
-        = image_tag('slide-7-header.png')
-        h2.orange ENVIE UM EMAIL À PRESIDENTA DILMA
+      .col-10.md-col-8.lg-col-6.mx-auto
+        .clearfix
+          .col.col-3
+            = image_tag('slide-7-header.png')
+          .col.col-9.p2
+            h3.inline.stroke.border.border-orange.rounded.m0.py1.px2.orange MISSÃO 01
+            h1.lh2.orange ENVIE UM EMAIL À PRESIDENTA DILMA
       .col-10.md-col-8.lg-col-6.mx-auto.center
-        h3.regular.white.mb3 Faça você também a sua parte para que todas as escolas do Brasil recebam no mínimo 10 Mega até 2016. É só usar o formulário abaixo :)
+        h3.regular.orange.mt0.mb3 Faça você também a sua parte para que todas as escolas do Brasil recebam no mínimo 10 Mega até 2016. É só usar o formulário abaixo :)
         = form_for(@message, class: 'mxn2') do |f|
           = f.fields_for :user do |user_form|
             .col-12.mx-auto.mb1

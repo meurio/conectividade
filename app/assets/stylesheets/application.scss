@@ -28,10 +28,14 @@ $slick-dot-size: $h4;
 @import 'messages';
 
 .pt3 { padding-top: 2rem; }
+.lh2 { line-height: 2rem; }
 .light { font-weight: 300; }
-.btn-primary.rounded { border-radius: 2rem; }
 .field:required { border-color: $border-color; }
 .field:required:focus { border-color: $field-focus-color; }
+
+.popup-header { height: 3.3rem; }
+.popup-header img { width: 5rem; }
 .remodal { padding: 0; }
 .remodal-close { color: white; left: auto; top: 0.6rem; right: 0.6rem; }
-.popup-header { height: 3.3rem }
+.rounded { border-radius: 2rem; }
+.stroke { border-width: 5px; }
