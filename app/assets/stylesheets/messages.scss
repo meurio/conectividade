@@ -32,15 +32,14 @@
 }
 
 .slide-3 {
-  .content-1 {
-    background: image-url('slide-3-manoel.png') top center;
-    background-size: cover;
+  .back {
+    background-size: cover !important;
+    z-index: -1;
   }
-
-  .content-2 {
-    background: image-url('slide-3-izabel.png') top center;
-    background-size: cover;
-  }
+  .content-1 .back.large { background: image-url('slide-3-manoel.png') top center; }
+  .content-1 .back.small { background: image-url('slide-3-manoel-sm.png') top center; }
+  .content-2 .back.large { background: image-url('slide-3-izabel.png') top center; }
+  .content-2 .back.small { background: image-url('slide-3-izabel-sm.png') top center; }
 
   .items { height: 20rem; }
   .slick-dots { bottom: 1rem; }
