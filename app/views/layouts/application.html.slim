@@ -4,13 +4,14 @@ html
     title Internet na Escola
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta property="og:title" content="Com mobilização, tem conexão!"
-    meta property="og:image" content=image_url('logo-internetnaescola.png')
+    meta property="og:image" content=image_url('facebook_thumb.png')
     meta property="og:description" content="Junte-se a milhares de pessoas que estão se mobilizando por uma internet rápida em todas as escolas públicas brasileiras. Sua participação pode transformar a educação em nosso país!"
     meta property="og:url" content=request.url
     meta property="fb:app_id" content=ENV["FACEBOOK_APP_ID"]
     meta property="og:site_name" content="Internet na Escola"
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
+    = favicon_link_tag 'favicon.png'
     = csrf_meta_tags
   body
     = render 'layouts/facebook_sdk'
