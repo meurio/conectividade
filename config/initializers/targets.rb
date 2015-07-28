@@ -1,9 +1,9 @@
 if Rails.env.production? && ENV["LIVE"]
-  PRESIDENT_EMAIL = "Dilma Roussef <email@dilma>"
+  PRESIDENT_EMAIL = "Dilma Rousseff <gabinetepessoal@presidencia.gov.br>"
   MINISTERS_EMAILS = [
-    "Ricardo Berzoini <email@ministro>",
-    "Renato Janine Ribeiro <email@ministro>",
-    "Aloizio Mercadante <email@ministro>"
+    "Ricardo Berzoini <chefia.gabinete@comunicacoes.gov.br>",
+    "Aloizio Mercadante <agendacasacivil@presidencia.gov.br>",
+    "Renato Janine <gabinetedoministro@mec.gov.br>"
   ]
 else
   raise "TEST_EMAIL is missing" if ENV["TEST_EMAIL"].nil?
