@@ -24,6 +24,18 @@ $(function(){
     $('#cadastro #user_role').val(role);
   });
 
+  // Smooth scrooling
+  function smoothScroll() {
+    var target = this.hash, $target = $(target);
+
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing', function () {
+      window.location.hash = target;
+    });
+  }
+  $(document).on('click', 'a.smooth', smoothScroll);
+
   // Share windows
   $('.facebook-share-button').click(function(event){
     event.preventDefault();
