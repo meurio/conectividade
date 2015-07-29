@@ -9,7 +9,9 @@ class MessagesController < ApplicationController
     user_params = message_params[:user_attributes]
     user = User.create_with(user_params).find_or_create_by(email: user_params[:email])
 
-    Message.create(user: user)
+    if Message.where(user: user).where('created_at >= ?', Date.today).empty?
+      Message.create(user: user)
+    end
 
     redirect_to root_path(anchor: 'compartilhe')
   end
