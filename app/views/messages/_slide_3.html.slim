@@ -13,7 +13,7 @@
             p.white Hoje, é bolsista no curso de Biomedicina na Universidade Maurício de Nassau em Fortaleza, além de atuar como embaixador da Geekie na sua escola, divulgando a plataforma para outros alunos.
 
           .center.py4
-            = link_to image_tag('slide-3-botao-video.png'), 'https://www.youtube.com/watch?v=63jxQOIKV_Q', target: :blank
+            = link_to image_tag('slide-3-botao-video.png'), '#manoel-video'
           .py2
     .content-2
       .back.large.absolute.top-0.right-0.bottom-0.left-0.md-show
@@ -28,5 +28,18 @@
             p.white Assistindo vídeo aulas e fazendo exercícios os alunos aprendiam no próprio ritmo O acúmulo de pontos permitia que observassem seu progresso e cooperassem para que todos evoluíssem. Resultado: uma sala mais unida, interessada e, agora, mais feliz em aprender matemática!
 
           .center.py4
-            = link_to image_tag('slide-3-botao-video.png'), 'https://www.youtube.com/watch?v=x-2VHHy12ds', target: :blank
+            = link_to image_tag('slide-3-botao-video.png'), '#izabel-video'
           .py2
+
+  .display-none
+    #izabel-video.responsive-embed.remodal data-remodal-id="izabel-video"
+      .container
+        button.remodal-close data-remodal-action="close"
+        .video-container
+          iframe.center width="560" height="315" src="https://www.youtube.com/embed/x-2VHHy12ds" frameborder="0" allowfullscreen="true"
+
+    #manoel-video.responsive-embed.remodal data-remodal-id="manoel-video"
+      .container
+        button.remodal-close data-remodal-action="close"
+        .video-container
+          iframe.center width="560" height="315" src="https://www.youtube.com/embed/63jxQOIKV_Q" frameborder="0" allowfullscreen="true"
