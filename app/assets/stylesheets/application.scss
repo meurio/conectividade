@@ -23,6 +23,7 @@ $slick-dot-size: $h4;
 @import 'slick-theme';
 
 /* App Styles */
+@import 'parsley';
 @import 'remodal';
 @import 'fonts';
 @import 'messages';
@@ -35,10 +36,32 @@ $slick-dot-size: $h4;
 
 .popup-header { height: 3.3rem; }
 .popup-header img { width: 5rem; }
-.remodal { padding: 0; }
-.remodal-close { color: white; left: auto; top: 0.6rem; right: 0.6rem; }
 .rounded { border-radius: 2rem; }
 .stroke { border-width: 5px; }
+
+/* Remodal */
+.remodal { padding: 0; }
+.remodal-close {
+  color: white;
+  left: auto;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+/* Parsley validator */
+ul.parsley-errors-list {
+  margin: 0 0 0.5rem 0;
+
+  li {
+    background-color: $red;
+    border-radius: 0 0 $border-radius $border-radius;
+    color: white;
+    font-size: $h6;
+    overflow: hidden;
+    padding: .5rem;
+    text-align: left;
+  }
+}
 
 /* Utility responsive classes */
 @media #{$breakpoint-sm} {

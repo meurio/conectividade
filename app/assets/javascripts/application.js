@@ -12,12 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require parsley
+//= require parsley.i18n.pt-br
 //= require slick
 //= require remodal
 //= require_tree .
 
 $(function(){
   $('.slick').slick();
+
+  $('form.new_message, form.new_user').parsley();
 
   $('.data-role-link').on('click', function(e) {
     var role = $(this).data('role');
