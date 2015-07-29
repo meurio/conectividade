@@ -39,3 +39,16 @@ $slick-dot-size: $h4;
 .remodal-close { color: white; left: auto; top: 0.6rem; right: 0.6rem; }
 .rounded { border-radius: 2rem; }
 .stroke { border-width: 5px; }
+
+/* Utility responsive classes */
+@media #{$breakpoint-sm} {
+  .sm-left-align { text-align: left !important; }
+}
+
+@media #{$breakpoint-md} {
+  .md-left-align { text-align: left !important; }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-left-align { text-align: left !important; }
+}
