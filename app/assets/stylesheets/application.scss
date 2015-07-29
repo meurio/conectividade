@@ -47,6 +47,7 @@ $slick-dot-size: $h4;
 
 @media #{$breakpoint-md} {
   .md-left-align { text-align: left !important; }
+  .md-inline { display: inline }
 }
 
 @media #{$breakpoint-lg} {
