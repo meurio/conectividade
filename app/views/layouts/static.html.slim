@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Internet na Escola
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag 'application', media: 'all'
+    = favicon_link_tag 'favicon.png'
+
+  body.bg-yellow
+    = yield

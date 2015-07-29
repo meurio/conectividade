@@ -16,6 +16,10 @@ class MessagesController < ApplicationController
     redirect_to root_path(anchor: 'compartilhe')
   end
 
+  def soon
+    render layout: 'static'
+  end
+
   private
   def message_params
     params.fetch(:message, {}).permit(user_attributes: [:first_name, :last_name, :email])
