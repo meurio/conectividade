@@ -20,6 +20,6 @@
         "https://www.facebook.com/dialog/share?\
           app_id=#{ENV['FACEBOOK_APP_ID']}\
           &display=popup\
-          &href=#{URI::encode(root_url(anchor: 'teste'))}\
-          &redirect_uri=#{URI::encode(root_url(anchor: 'teste'))}", class: 'facebook-share-button'
-        = link_to image_tag('slide-11-twitter.png', class: 'px2 mb2'), "https://twitter.com/intent/tweet?url=#{URI::encode(root_url(anchor: 'teste'))}&text=#{URI::encode('Junte-se a milhares de pessoas que estão se mobilizando por uma internet rápida em todas as escolas públicas do país:')}", class: 'twitter-share-button'
+          &href=#{URI::encode(root_url)}\
+          &redirect_uri=#{URI::encode(root_url)}", class: 'facebook-share-button'
+        = link_to image_tag('slide-11-twitter.png', class: 'px2 mb2'), "https://twitter.com/intent/tweet?url=#{URI::encode(root_url)}&text=#{URI::encode('Qual a velocidade da internet na sua escola? Faça o teste e apoie a campanha por uma internet rápida na Educação:')}", class: 'twitter-share-button'
