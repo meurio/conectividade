@@ -81,11 +81,14 @@ h2.cta {
   }
   .iframe-container {
     position: relative;
-    padding-bottom: 120%;
+    padding-bottom: 540px;
     padding-top: 30px;
     height: 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .iframe-container.md-show {
+    padding-bottom: 72.22%;
   }
   iframe,
   object,
