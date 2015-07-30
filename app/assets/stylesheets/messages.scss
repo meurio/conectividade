@@ -65,6 +65,20 @@
   background-color: #F6DF6B;
 }
 
+.slide-10 {
+  .back {
+    height: 300px;
+    background-size: cover !important;
+    z-index: -1;
+  }
+  .content-1 { background: image-url('slide-10-01.jpg') top center; }
+  .content-2 { background: image-url('slide-10-02.jpg') top center; }
+  .content-3 { background: image-url('slide-10-03.jpg') top center; }
+  .content-4 { background: image-url('slide-10-04.jpg') top center; }
+  .content-5 { background: image-url('slide-10-05.jpg') top center; }
+  .content-6 { background: image-url('slide-10-06.jpg') top center; }
+}
+
 h2.cta {
   line-height: 2rem;
   letter-spacing: 0.02rem;

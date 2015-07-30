@@ -31,6 +31,8 @@ $slick-dot-size: $h4;
 .pt3 { padding-top: 2rem; }
 .lh2 { line-height: 2rem; }
 .light { font-weight: 300; }
+.no-decoration:hover { text-decoration: none; }
+.flex-self-end { align-self: flex-end;}
 .field:required { border-color: $border-color; }
 .field:required:focus { border-color: $field-focus-color; }
 
