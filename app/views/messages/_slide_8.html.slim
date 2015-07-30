@@ -20,6 +20,7 @@
         "https://www.facebook.com/dialog/share?\
           app_id=#{ENV['FACEBOOK_APP_ID']}\
           &display=popup\
+          &href=#{URI::encode(root_url(anchor: 'teste'))}\
           &name=#{URI::encode('Teste a internet da sua escola!')}\
           &description=#{URI::encode('Junte-se a milhares de pessoas para mostrar que a internet nas escolas não é suficiente para o acesso a conteúdos educativos de qualidade! Em menos de 1 minuto, você ajuda a transformar a Educação em nosso país!')}\
           &link=#{URI::encode(root_url(anchor: 'teste'))}\
