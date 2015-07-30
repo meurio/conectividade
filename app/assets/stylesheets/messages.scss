@@ -69,7 +69,24 @@
   .back {
     height: 300px;
     background-size: cover !important;
-    z-index: -1;
+    h2 { transition: all .2s ease-in-out; }
+  }
+  .back:hover {
+    h2 { padding-bottom: 1rem; }
+  }
+  .back:after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.8));
+    transition: all .2s linear;
+  }
+  .back:hover:after {
+    opacity: 1;
   }
   .content-1 { background: image-url('slide-10-01.jpg') top center; }
   .content-2 { background: image-url('slide-10-02.jpg') top right; }
@@ -77,16 +94,6 @@
   .content-4 { background: image-url('slide-10-04.png') top center; }
   .content-5 { background: image-url('slide-10-05.jpg') top center; }
   .content-6 { background: image-url('slide-10-06.png') top center; }
-
-  .overlay {
-    content: '';
-    position: absolute;
-    top: 20%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.6));
-  }
 }
 
 h2.cta {
