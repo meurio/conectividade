@@ -13,6 +13,11 @@ html
     meta property="fb:app_id" content=ENV["FACEBOOK_APP_ID"]
     meta property="og:site_name" content="Internet na Escola"
 
+    meta name="twitter:card" content="summary_large_image"
+    meta name="twitter:title" content="Com mobilização, tem conexão!"
+    meta name="twitter:description" content="Junte-se a milhares de pessoas que estão se mobilizando por uma internet rápida em todas as escolas públicas brasileiras. Sua participação pode transformar a educação em nosso país!"
+    meta name="twitter:image" content=image_url('facebook_thumb.png')
+
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = favicon_link_tag 'favicon.png'
