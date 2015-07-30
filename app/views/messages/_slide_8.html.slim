@@ -23,5 +23,6 @@
           &name=#{URI::encode('Teste a internet da sua escola!')}\
           &description=#{URI::encode('Junte-se a milhares de pessoas para mostrar que a internet nas escolas não é suficiente para o acesso a conteúdos educativos de qualidade! Em menos de 1 minuto, você ajuda a transformar a Educação em nosso país!')}\
           &link=#{URI::encode(root_url(anchor: 'teste'))}\
+          &picture=#{URI::encode(image_url('fb-test-share.jpg'))}\
           &redirect_uri=#{URI::encode(close_window_url)}", class: 'facebook-share-button'
         = link_to image_tag('slide-11-twitter.png', class: 'px2 mb2'), "https://twitter.com/intent/tweet?url=#{URI::encode(root_url(anchor: 'teste'))}&text=#{URI::encode('Qual a velocidade da internet na sua escola? Faça o teste e apoie a campanha por uma internet rápida na Educação:')}", class: 'twitter-share-button'
