@@ -17,11 +17,11 @@
           iframe.fit src="http://54.207.215.75/partners/index.html?partner" width="720px" height="520px" frameborder="0" style="padding-top:30px;"
       .col-12.md-col-10.mx-auto.center
         = link_to image_tag('slide-11-facebook.png', class: 'px2 mb2'),
-        "https://www.facebook.com/dialog/share?\
+        "https://www.facebook.com/dialog/feed?\
           app_id=#{ENV['FACEBOOK_APP_ID']}\
           &display=popup\
           &href=#{URI::encode(root_url(anchor: 'teste'))}\
-          &caption=#{URI::encode('Teste a internet da sua escola!')}\
+          &name=#{URI::encode('Teste a internet da sua escola!')}\
           &description=#{URI::encode('Junte-se a milhares de pessoas para mostrar que a internet nas escolas não é suficiente para o acesso a conteúdos educativos de qualidade! Em menos de 1 minuto, você ajuda a transformar a Educação em nosso país!')}\
           &link=#{URI::encode(root_url(anchor: 'teste'))}\
           &picture=#{URI::encode(image_url('fb-test-share.jpg'))}\
