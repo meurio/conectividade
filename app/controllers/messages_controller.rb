@@ -20,6 +20,10 @@ class MessagesController < ApplicationController
     render layout: 'static'
   end
 
+  def close_window
+    render layout: 'static'
+  end
+
   private
   def message_params
     params.fetch(:message, {}).permit(user_attributes: [:first_name, :last_name, :email])
