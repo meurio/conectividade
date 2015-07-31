@@ -11,11 +11,16 @@
         = image_tag('logo-its.png', class: 'py3')
       .hide.col.col-12.md-col-6.lg-col-3.px2.mb3.center
         .md-col-9.mx-auto= image_tag('logo-lemann.png')
-    .clearfix.px2.mxn2.center
-      .block.md-inline.px2.py1= mail_to('contato@internetnaescola.org', 'contato@internetnaescola.org', class: 'gray')
-      .block.md-inline.px2.py1= link_to('Termos de Uso e Privacidade', '#termos', class: 'gray')
-      .block.md-inline.px2.py1
-        .fb-like data-href="#{root_url}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"
+    .clearfix
+      .col-12.mx-auto.md-col.md-col-6.center
+        .block.py1
+          .fb-page data-href="https://www.facebook.com/internetnaescola" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"
+            .fb-xfbml-parse-ignore
+              blockquote cite="https://www.facebook.com/internetnaescola"
+                = link_to('Internet na Escola', 'https://www.facebook.com/internetnaescola')
+      .col-12.mx-auto.md-col.md-col-6.center
+        .block.py1= mail_to('contato@internetnaescola.org', 'contato@internetnaescola.org', class: 'gray')
+        .block.py1= link_to('Termos de Uso e Privacidade', '#termos', class: 'gray')
 
   .display-none
     #termos.remodal data-remodal-id="termos"
