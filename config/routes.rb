@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   get 'soon' => 'messages#soon'
   get 'close_window' => 'messages#close_window', as: :close_window
 
-  root 'messages#index'
+  if Rails.env.production? && !ENV["LIVE"]
+    root 'messages#soon'
+  else
+    root 'messages#index'
+  end
 end
