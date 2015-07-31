@@ -19,13 +19,21 @@
 //= require_tree .
 
 $(function(){
+  // initialize slick carousel
   $('.slick').slick();
 
+  // validates forms
   $('form.new_message, form.new_user').parsley();
 
+  // sets the user role when the button is clicked
   $('.data-role-link').on('click', function(e) {
     var role = $(this).data('role');
     $('#cadastro #user_role').val(role);
+  });
+
+  // stops youtube video when modal is closed
+  $(document).on('closing', '.remodal', function(e) {
+    $(this).find('iframe').attr('src', $(this).find('iframe').attr('src'));
   });
 
   // Smooth scrooling
@@ -40,7 +48,7 @@ $(function(){
   }
   $(document).on('click', 'a.smooth', smoothScroll);
 
-  // Share windows
+  // Facebook share window
   $('.facebook-share-button').click(function(event){
     event.preventDefault();
     window.open(
@@ -53,6 +61,7 @@ $(function(){
     return false;
   });
 
+  // Twitter share window
   $('.twitter-share-button').click(function(event){
     event.preventDefault();
     window.open(
