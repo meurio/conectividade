@@ -48,6 +48,19 @@ $(function(){
   }
   $(document).on('click', 'a.smooth', smoothScroll);
 
+  // Smooth scrolling to top without hash
+  $('a.to-top').on('click', function() {
+    $('html, body').animate({ scrollTop: 0 }, 1000);
+    return false;
+  });
+  $(window).scroll(function() {
+  	if ($(this).scrollTop() > 100) {
+  		$('a.to-top').fadeIn('slow');
+  	} else {
+  		$('a.to-top').fadeOut('slow');
+  	}
+  });
+
   // Facebook share window
   $('.facebook-share-button').click(function(event){
     event.preventDefault();

@@ -35,6 +35,31 @@ $slick-dot-size: $h4;
 .flex-self-end { align-self: flex-end;}
 .field:required { border-color: $border-color; }
 .field:required:focus { border-color: $field-focus-color; }
+.to-top {
+  display: none;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 40px;
+	bottom: 40px;
+	background-color: black;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+  opacity: .6;
+}
+.arrow-up {
+  width: 0px;
+  height: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+  font-size: 0;
+  line-height: 0;
+  margin-left: 15px;
+}
 
 .popup-header { height: 3.3rem; }
 .popup-header img { width: 5rem; }
