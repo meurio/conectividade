@@ -13,7 +13,7 @@ gem 'slick_rails'
 gem 'parsley-rails'
 
 gem 'puma'
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: [:staging, :production]
 
 gem 'gibbon'
 gem 'mailcatcher', group: :development
