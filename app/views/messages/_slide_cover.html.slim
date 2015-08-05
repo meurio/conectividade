@@ -14,16 +14,16 @@
           .hide.bg-red.white
             .center.regular.p2
               h1.m0.mt3= Message.count
-              h3.regular.m0 EMAILS
+              h3.regular.m0 E-MAILS
               h4.regular.m0 ENVIADOS
         .col.md-col-1
       .clearfix
         .col-10.md-col-8.mx-auto
-          h2.cta.gray.mb3.center Na pátria educadora, a melhor internet da cidade está na escola! Envie um e-mail para a presidenta Dilma para que todas as escolas do Brasil recebam 10 Mega até 2016!
+          h2.cta.gray.mb3.center Na pátria educadora, a melhor internet da cidade está na escola! Envie um e-mail para a presidenta Dilma para que todas as escolas do Brasil recebam 10 MB até 2016.
         .col-10.mx-auto
           p.mb2
             = link_to '#email-preview', class: ['gray', 'underline'] do
-              | Quero ver o email
+              | Quero ver o e-mail
               br
               | que será enviado
   .bg-yellow
@@ -36,7 +36,7 @@
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
               = user_form.text_field(:last_name, placeholder: 'Sobrenome', required: true, class: ['field', 'col-12'])
             .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
-              = user_form.email_field(:email, placeholder: 'Email', required: true, class: ['field', 'col-12'])
+              = user_form.email_field(:email, placeholder: 'E-mail', required: true, class: ['field', 'col-12'])
           .md-col.col-10.md-col-3.mx-auto.px2.mb1.lg-mb0
             = f.submit 'PEÇA PARA A DILMA', class: ['btn', 'btn-primary', 'rounded', 'col-12']
 
