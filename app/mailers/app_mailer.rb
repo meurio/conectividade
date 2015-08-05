@@ -6,7 +6,7 @@ class AppMailer < ActionMailer::Base
     headers "X-SMTPAPI" => "{ \"category\": [\"conectividade\", \"thanks\"] }"
     mail(
       to: @message.user.email,
-      subject: 'Boa, seu pedido para a presidenta Dilma e para os Ministros foi enviado!'
+      subject: 'Boa, seu pedido para a presidenta Dilma e para os ministros foi enviado!'
     )
   end
 
@@ -17,7 +17,7 @@ class AppMailer < ActionMailer::Base
       to: PRESIDENT_EMAIL,
       cc: MINISTERS_EMAILS,
       from: "#{@message.user.name} <resposta@internetnaescola.org>",
-      subject: 'Na pátria educadora, a melhor internet da cidade deve estar na escola!'
+      subject: 'Presidenta Dilma Rousseff: firme o compromisso público por internet rápida nas escolas.'
     )
   end
 

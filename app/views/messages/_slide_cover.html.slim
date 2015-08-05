@@ -47,16 +47,16 @@
         button.remodal-close data-remodal-action="close"
         = image_tag('slide-7-header.png', class: 'mt1')
       .col-10.mx-auto.p3.left-align
-        h3.py2 Veja abaixo o e-mail que será enviado em seu nome para a presidenta Dilma e os ministros das Telecomunicações, da Educação e da Casa Civil.
+        h3.py2 Veja abaixo o e-mail que será enviado para a presidenta Dilma e os ministros das Telecomunicações, da Educação e da Casa Civil.
 
         .border-top.border-bottom.py2.mb2
           strong Assunto:
-          span  Na pátria educadora, a melhor internet da cidade deve estar na escola!
+          span  Presidenta Dilma Rousseff: firme o compromisso público por internet rápida nas escolas.
 
         = render 'app_mailer/email_message'
 
         .center
-          = link_to 'QUERO ENVIAR!', '#', class: ['btn', 'btn-primary', 'rounded', 'py1'], data: { 'remodal-confirm': true }
+          = link_to 'QUERO ENVIAR', '#', class: ['btn', 'btn-primary', 'rounded', 'py1'], data: { 'remodal-confirm': true }
 
   #compartilhe.remodal data-remodal-id="compartilhe"
     .container
@@ -66,7 +66,7 @@
       .py3.center
         .col-10.md-col-6.mx-auto
           h2 E-mail enviado! ;)
-          p.py2.gray Oba, você mandou o seu recado para a presidenta Dilma e Ministros. Agora, conte para todos os seus amigos e ajude a aumentar a força dessa mobilização!
+          p.py2.gray Oba, você mandou o seu recado para a presidenta Dilma e para os ministros. Agora, conte para todos os seus amigos e ajude a aumentar a força dessa mobilização!
         .col-12.md-col-6.mx-auto
           = link_to image_tag('slide-11-facebook.png', class: 'px2'),
           "https://www.facebook.com/dialog/share?\

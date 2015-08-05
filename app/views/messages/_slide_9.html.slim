@@ -40,7 +40,7 @@
       .py3
         .col-10.mx-auto.center
           h2 Nosso bonde está prestes a partir!
-          p.gray Que legal que você quer puxar o Bonde da Conexão na sua escola. Deixe seu contato para a gente te mandar os próximos passos dessa ação. Se você usar Whatsapp, fica ainda mais fácil trocar ideias!
+          p.gray Que legal que você quer puxar o Bonde da Conexão na sua escola. Deixe seu contato para a gente te mandar os próximos passos dessa ação. Se você usar Whatsapp, fica ainda mais fácil trocar ideias.
         .col-10.mx-auto.center
           = form_for(@user, class: 'mnx2') do |f|
             = f.hidden_field(:role, id: :user_role)
@@ -54,7 +54,7 @@
                 = f.text_field(:school, placeholder: 'Escola*', required: true, class: ['field', 'col-12'])
             .clearfix
               .col.col-8.md-col-9.mx-auto.px1
-                = f.email_field(:email, placeholder: 'Email*', required: true, class: ['field', 'col-12'])
+                = f.email_field(:email, placeholder: 'E-mail*', required: true, class: ['field', 'col-12'])
               .col.col-4.md-col-3.mx-auto.px1
                 = f.number_field(:age, placeholder: 'Idade*', required: true, class: ['field', 'col-12'])
             .clearfix
@@ -81,7 +81,7 @@
       .py3.center
         .col-10.mx-auto
           h2 Oba, já estamos juntos!
-          p.gray Vamos entrar em contato com você! ;)
+          p.gray Vamos entrar em contato com você. ;)
         .col-12.mx-auto
           = link_to image_tag('slide-11-facebook.png', class: 'px2'),
           "https://www.facebook.com/dialog/share?\
