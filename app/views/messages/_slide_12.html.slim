@@ -12,15 +12,14 @@
       .col.col-12.md-col-6.lg-col-3.px2.mb3.center
         .md-col-9.mx-auto= link_to image_tag('logo-lemann.png'), 'http://www.fundacaolemann.org.br', target: :blank
     .clearfix
-      .col-12.mx-auto.md-col.md-col-6.center
-        .block.py1
-          .fb-page data-href="https://www.facebook.com/internetnaescola" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"
-            .fb-xfbml-parse-ignore
-              blockquote cite="https://www.facebook.com/internetnaescola"
-                = link_to('Internet na Escola', 'https://www.facebook.com/internetnaescola')
-      .col-12.mx-auto.md-col.md-col-6.center
-        .block.py1= mail_to('contato@internetnaescola.org', 'contato@internetnaescola.org', class: 'gray')
-        .block.py1= link_to('Termos de Uso e Privacidade', '#termos', class: 'gray')
+      .col-12.center.gray.mb4
+        = mail_to('contato@internetnaescola.org', 'contato@internetnaescola.org', class: ['gray', 'px1'])
+        | |
+        = link_to('Termos de Uso e Privacidade', '#termos', class: ['gray', 'px1'])
+        | |
+        = link_to('Voltar ao topo', '#', class: ['gray', 'px1'])
+        | |
+        = link_to(image_tag('facebook_footer.gif', style: 'width: 50px; margin-bottom: -18px;'), 'https://www.facebook.com/internetnaescola', class: ['gray', 'px1'], target: :blank)
 
   .display-none
     #termos.remodal data-remodal-id="termos"
