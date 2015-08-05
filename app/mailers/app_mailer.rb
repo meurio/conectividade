@@ -1,5 +1,5 @@
 class AppMailer < ActionMailer::Base
-  default from: 'Liane Lira <liane@internetnaescola.org>'
+  default from: 'Gustavo Simon <gut@internetnaescola.org>'
 
   def thanks message
     @message = message
