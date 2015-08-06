@@ -64,6 +64,10 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  # Default Mailer Host
+  Rails.application.routes.default_url_options[:host] = 'http://conectividade-staging.herokuapp.com/'
+
+  # Action Mailer configuration
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     user_name: ENV["SENDGRID_USERNAME"],

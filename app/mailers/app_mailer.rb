@@ -1,7 +1,9 @@
 class AppMailer < ActionMailer::Base
   default from: 'Gustavo Simon <gut@internetnaescola.org>'
+  layout 'signed_mail', except: :message_for_the_president
 
   def thanks message
+    attachments.inline['assinatura-email-gut.png'] = File.read("#{Rails.root}/app/assets/images/assinatura-email-gut.png")
     @message = message
     headers "X-SMTPAPI" => "{ \"category\": [\"conectividade\", \"thanks\"] }"
     mail(

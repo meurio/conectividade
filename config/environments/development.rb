@@ -16,6 +16,9 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  # Default Mailer Host
+  Rails.application.routes.default_url_options[:host] = 'http://localhost:3000/'
+
   # Mailcatcher configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }
