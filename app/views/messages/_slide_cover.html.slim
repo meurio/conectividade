@@ -75,3 +75,21 @@
             &href=#{URI::encode(root_url)}\
             &redirect_uri=#{URI::encode(close_window_url)}", class: 'facebook-share-button'
           = link_to image_tag('slide-11-twitter.png', class: 'px2'), "https://twitter.com/intent/tweet?url=#{URI::encode('http://internetnaescola.org/')}&hashtags=internetnaescola&text=#{URI::encode('Junte-se a milhares de pessoas por uma internet rápida em todas as escolas públicas do país')}", class: 'twitter-share-button'
+
+  #email-ja-enviado.remodal data-remodal-id="email-ja-enviado"
+    .container
+      .col-12.popup-header.bg-yellow
+        button.remodal-close data-remodal-action="close"
+        = image_tag('slide-7-header.png', class: 'mt1')
+      .py3.center
+        .col-10.mx-auto
+          h2 Ops, você já enviou um e-mail hoje!
+          p.gray Você pode mandar o seu pedido à Presidenta todos os dias, uma vez por dia! Mande de novo amanhã! Enquanto isso, espalhe por aí nossa mobilização!
+        .col-12.mx-auto
+          = link_to image_tag('slide-11-facebook.png', class: 'px2'),
+          "https://www.facebook.com/dialog/share?\
+            app_id=#{ENV['FACEBOOK_APP_ID']}\
+            &display=popup\
+            &href=#{URI::encode(root_url)}\
+            &redirect_uri=#{URI::encode(close_window_url)}", class: 'facebook-share-button'
+          = link_to image_tag('slide-11-twitter.png', class: 'px2'), "https://twitter.com/intent/tweet?url=#{URI::encode('http://internetnaescola.org/')}&hashtags=internetnaescola&text=#{URI::encode('Junte-se a milhares de pessoas por uma internet rápida em todas as escolas públicas do país')}", class: 'twitter-share-button'
