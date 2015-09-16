@@ -1,34 +1,38 @@
 .slide-12
   .container.py4
-    .clearfix.px2.mxn2
-      .col.col-12.lg-col-2.px2.mb3.center
-        h3.center.regular.mb2.gray REALIZAÇÃO
-      .col.col-12.md-col-4.lg-col-2.px2.mb3.center
-        .md-col-10.mx-auto= link_to image_tag('logo-lemann.jpg'), 'http://www.fundacaolemann.org.br', target: :blank
-      .col.col-12.md-col-4.lg-col-2.px2.mb3.center
-        .col-8.mx-auto= link_to image_tag('logo-inspirare.png', class: ['py2', 'mt1']), 'http://inspirare.org.br', target: :blank
-      .col.col-12.md-col-4.lg-col-2.p2.mb3.center
-        = link_to image_tag('logo-nossas-cidades.png'), 'http://nossascidades.org', target: :blank
-      .col.col-12.lg-col-2.px2.mb3.center
-        h3.center.regular.mb2.gray APOIO
-      .col.col-12.lg-col-2.px2.mb3.center
-        .col-12.md-col-4.lg-col-12.mx-auto= link_to image_tag('logo-its.png', class: 'py3'), 'http://itsrio.org', target: :blank
-    .clearfix
-      .col-12.center.gray.mb4
-        = mail_to('contato@internetnaescola.org', 'contato@internetnaescola.org', class: ['gray', 'px1'])
-        | |
-        = link_to('Termos de Uso e Privacidade', '#termos', class: ['gray', 'px1'])
-        | |
-        = link_to('Voltar ao topo', '#', class: ['gray', 'px1'])
-        | |
-        = link_to(image_tag('facebook_footer.gif', style: 'width: 50px; margin-bottom: -18px;'), 'https://www.facebook.com/internetnaescola', class: ['gray', 'px1'], target: :blank)
+    .col-10.md-col-8.lg-col-6.mx-auto
+      h1.center MATERIAIS DE MOBILIZAÇÃO
+      h2.cta.gray.mb4.center Faça o download dos nossos banners e cartazes e espalhe por aí nossa mensagem.
+    .col-10.lg-col-8.mx-auto
+      .clearfix.px2.mxn2
+        .col.col-12.md-col-6.px2.mb3
+          h2 Cartazes
+          = link_to 'cartaz_azul_1.pdf', download_file_path('cartaz_azul_1.pdf'), class: :block
+          = link_to 'cartaz_azul_2.pdf', download_file_path('cartaz_azul_2.pdf'), class: :block
+          = link_to 'cartaz_azul_3.pdf', download_file_path('cartaz_azul_3.pdf'), class: :block
+          = link_to 'cartaz_azul_4.pdf', download_file_path('cartaz_azul_4.pdf'), class: :block
+          = link_to 'cartaz_azul_5.pdf', download_file_path('cartaz_azul_5.pdf'), class: :block
+          = link_to 'cartaz_preto_1.pdf', download_file_path('cartaz_preto_1.pdf'), class: :block
+          = link_to 'cartaz_preto_2.pdf', download_file_path('cartaz_preto_2.pdf'), class: :block
+          = link_to 'cartaz_preto_3.pdf', download_file_path('cartaz_preto_3.pdf'), class: :block
+          = link_to 'cartaz_preto_4.pdf', download_file_path('cartaz_preto_4.pdf'), class: :block
+          = link_to 'cartaz_preto_5.pdf', download_file_path('cartaz_preto_5.pdf'), class: :block
+          = link_to 'cartaz_vermelho_1.pdf', download_file_path('cartaz_vermelho_1.pdf'), class: :block
+          = link_to 'cartaz_vermelho_2.pdf', download_file_path('cartaz_vermelho_2.pdf'), class: :block
+          = link_to 'cartaz_vermelho_3.pdf', download_file_path('cartaz_vermelho_3.pdf'), class: :block
+          = link_to 'cartaz_vermelho_4.pdf', download_file_path('cartaz_vermelho_4.pdf'), class: :block
+          = link_to 'cartaz_vermelho_5.pdf', download_file_path('cartaz_vermelho_5.pdf'), class: :block
 
-  .display-none
-    #termos.remodal data-remodal-id="termos"
-      .container
-        .col-12.popup-header.bg-blue
-          button.remodal-close data-remodal-action="close"
-          = image_tag('slide-9-header.png', class: 'mt1')
-        .py3
-          .col-10.mx-auto.left-align
-            = render 'tos'
+        .col.col-12.md-col-6.px2.mb3
+          h2 Adesivos
+          = link_to 'adesivo_azul_internetnaescola.pdf', download_file_path('adesivo_azul_internetnaescola.pdf'), class: :block
+          = link_to 'adesivo_branco_internetnaescola.pdf', download_file_path('adesivo_branco_internetnaescola.pdf'), class: :block
+          = link_to 'adesivo_vermelho_internetnaescola.pdf', download_file_path('adesivo_vermelho_internetnaescola.pdf'), class: :block
+          = link_to 'internetnaescola_adesivos.ai', download_file_path('internetnaescola_adesivos.ai'), class: :block
+          h2 Banners
+          = link_to 'bannerweb_300x250_internetnaescola_v1.gif', download_file_path('bannerweb_300x250_internetnaescola_v1.gif'), class: :block
+          = link_to 'bannerweb_300x250_internetnaescola_v2.gif', download_file_path('bannerweb_300x250_internetnaescola_v2.gif'), class: :block
+          = link_to 'bannerweb_468x60_internetnaescola_v1.gif', download_file_path('bannerweb_468x60_internetnaescola_v1.gif'), class: :block
+          = link_to 'bannerweb_468x60_internetnaescola_v2.gif', download_file_path('bannerweb_468x60_internetnaescola_v2.gif'), class: :block
+          = link_to 'bannerweb_728x90_internetnaescola_v1.gif', download_file_path('bannerweb_728x90_internetnaescola_v1.gif'), class: :block
+          = link_to 'bannerweb_728x90_internetnaescola_v2.gif', download_file_path('bannerweb_728x90_internetnaescola_v2.gif'), class: :block

@@ -26,6 +26,10 @@ class MessagesController < ApplicationController
     render layout: 'static'
   end
 
+  def download_file
+    send_file "#{Rails.root}/public/materials/#{params[:filename]}"
+  end
+
   private
   def message_params
     params.fetch(:message, {}).permit(user_attributes: [:first_name, :last_name, :email])
