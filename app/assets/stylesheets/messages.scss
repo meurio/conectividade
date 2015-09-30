@@ -97,6 +97,11 @@
   .content-6 { background: image-url('slide-10-06.png') top center; }
 }
 
+#mapa {
+  background: image-url('mapa.png') top center;
+  background-size: cover;
+}
+
 h2.cta {
   line-height: 2rem;
   letter-spacing: 0.02rem;
