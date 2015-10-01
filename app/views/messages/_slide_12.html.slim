@@ -2,37 +2,144 @@
   .container.py4
     .col-10.md-col-8.lg-col-6.mx-auto
       h1.center MATERIAIS DE MOBILIZAÇÃO
-      h2.cta.gray.mb4.center Faça o download dos nossos materiais de mobilização e espalhe por aí nossa mensagem.
-    .col-10.lg-col-8.mx-auto
-      .clearfix.px2.mxn2
-        .col.col-12.md-col-6.px2.mb3
-          h2 Cartazes
-          = link_to 'cartaz_azul_1.pdf', download_file_path('cartaz_azul_1.pdf'), class: :block
-          = link_to 'cartaz_azul_2.pdf', download_file_path('cartaz_azul_2.pdf'), class: :block
-          = link_to 'cartaz_azul_3.pdf', download_file_path('cartaz_azul_3.pdf'), class: :block
-          = link_to 'cartaz_azul_4.pdf', download_file_path('cartaz_azul_4.pdf'), class: :block
-          = link_to 'cartaz_azul_5.pdf', download_file_path('cartaz_azul_5.pdf'), class: :block
-          = link_to 'cartaz_preto_1.pdf', download_file_path('cartaz_preto_1.pdf'), class: :block
-          = link_to 'cartaz_preto_2.pdf', download_file_path('cartaz_preto_2.pdf'), class: :block
-          = link_to 'cartaz_preto_3.pdf', download_file_path('cartaz_preto_3.pdf'), class: :block
-          = link_to 'cartaz_preto_4.pdf', download_file_path('cartaz_preto_4.pdf'), class: :block
-          = link_to 'cartaz_preto_5.pdf', download_file_path('cartaz_preto_5.pdf'), class: :block
-          = link_to 'cartaz_vermelho_1.pdf', download_file_path('cartaz_vermelho_1.pdf'), class: :block
-          = link_to 'cartaz_vermelho_2.pdf', download_file_path('cartaz_vermelho_2.pdf'), class: :block
-          = link_to 'cartaz_vermelho_3.pdf', download_file_path('cartaz_vermelho_3.pdf'), class: :block
-          = link_to 'cartaz_vermelho_4.pdf', download_file_path('cartaz_vermelho_4.pdf'), class: :block
-          = link_to 'cartaz_vermelho_5.pdf', download_file_path('cartaz_vermelho_5.pdf'), class: :block
+      h2.cta.gray.mb3.center Faça o download dos nossos materiais de mobilização e espalhe por aí nossa mensagem.
+    .clearfix.mxn2
+      .col.col-12.md-col-4.p2.center
+        .col-5.mx-auto.items= image_tag('slide-12-1.png')
+        .items-secondary
+          h3.col-10.mx-auto.mt0.mb1 Cartazes
+        .items-terciary.mb1
+          p.col-10.md-col-8.mx-auto.gray Pra você pendurar na sua escola, bairro ou cidade
+        = link_to 'Ver todos', '#cartazes', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
+        .md-hide.py3
+      .col.col-12.md-col-4.p2.center
+        .col-6.mx-auto.items= image_tag('slide-12-2.png', class: 'py2', style: 'margin-top: 13px;')
+        .items-secondary
+          h3.col-10.mx-auto.mt0.mb1 Banners web
+        .items-terciary.mb1
+          p.col-10.md-col-8.mx-auto.gray Pra você que tem um site e quer apoiar a campanha
+        = link_to 'Ver todos', '#banners', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
+        .md-hide.py3
+      .col.col-12.md-col-4.p2.center
+        .col-6.mx-auto.items= image_tag('slide-12-3.png', class: 'py2', style: 'margin-top: 10px;')
+        .items-secondary
+          h3.col-10.mx-auto.mt0.mb1 Adesivos
+        .items-terciary.mb1
+          p.col-10.md-col-8.mx-auto.gray Pra você customizar tudo o que é objeto
+        = link_to 'Ver todos', '#adesivos', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
+        .md-hide.py3
 
-        .col.col-12.md-col-6.px2.mb3
-          h2 Adesivos
-          = link_to 'adesivo_azul_internetnaescola.pdf', download_file_path('adesivo_azul_internetnaescola.pdf'), class: :block
-          = link_to 'adesivo_branco_internetnaescola.pdf', download_file_path('adesivo_branco_internetnaescola.pdf'), class: :block
-          = link_to 'adesivo_vermelho_internetnaescola.pdf', download_file_path('adesivo_vermelho_internetnaescola.pdf'), class: :block
-          = link_to 'internetnaescola_adesivos.ai', download_file_path('internetnaescola_adesivos.ai'), class: :block
-          h2 Banners
-          = link_to 'bannerweb_300x250_internetnaescola_v1.gif', download_file_path('bannerweb_300x250_internetnaescola_v1.gif'), class: :block
-          = link_to 'bannerweb_300x250_internetnaescola_v2.gif', download_file_path('bannerweb_300x250_internetnaescola_v2.gif'), class: :block
-          = link_to 'bannerweb_468x60_internetnaescola_v1.gif', download_file_path('bannerweb_468x60_internetnaescola_v1.gif'), class: :block
-          = link_to 'bannerweb_468x60_internetnaescola_v2.gif', download_file_path('bannerweb_468x60_internetnaescola_v2.gif'), class: :block
-          = link_to 'bannerweb_728x90_internetnaescola_v1.gif', download_file_path('bannerweb_728x90_internetnaescola_v1.gif'), class: :block
-          = link_to 'bannerweb_728x90_internetnaescola_v2.gif', download_file_path('bannerweb_728x90_internetnaescola_v2.gif'), class: :block
+  .display-none
+    #cartazes.remodal data-remodal-id="cartazes"
+      .container
+        .col-12.popup-header.bg-blue
+          button.remodal-close data-remodal-action="close"
+          = image_tag('header-cartazes.png', class: 'mt1')
+        .col-10.md-col-8.lg-col-6.mx-auto
+          h1.mt4.mb0.center CARTAZES
+          h4.cta.gray.mt0.mb2.center Clique na imagem para baixar seu cartaz favorito
+
+        .col-11.mx-auto
+          .col.lg-col-1.lg-show &nbsp;
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_vermelho_1.png'), download_file_path('cartaz_vermelho_1.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 01 A4 Vermelho
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_vermelho_2.png'), download_file_path('cartaz_vermelho_2.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 02 A4 Vermelho
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_vermelho_3.png'), download_file_path('cartaz_vermelho_3.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 03 A4 Vermelho
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_vermelho_4.png'), download_file_path('cartaz_vermelho_4.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 04 A4 Vermelho
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_vermelho_5.png'), download_file_path('cartaz_vermelho_5.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 05 A4 Vermelho
+          .col.lg-col-1.lg-show &nbsp;
+          .clearfix.lg-show
+          .col.lg-col-1.lg-show &nbsp;
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_azul_1.png'), download_file_path('cartaz_azul_1.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 01 A4 Azul
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_azul_2.png'), download_file_path('cartaz_azul_2.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 02 A4 Azul
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_azul_3.png'), download_file_path('cartaz_azul_3.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 03 A4 Azul
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_azul_4.png'), download_file_path('cartaz_azul_4.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 04 A4 Azul
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_azul_5.png'), download_file_path('cartaz_azul_5.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 05 A4 Azul
+          .col.lg-col-1.lg-show &nbsp;
+          .clearfix.lg-show
+          .col.lg-col-1.lg-show &nbsp;
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_preto_1.png'), download_file_path('cartaz_preto_1.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 01 A4 Preto
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_preto_2.png'), download_file_path('cartaz_preto_2.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 02 A4 Preto
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_preto_3.png'), download_file_path('cartaz_preto_3.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 03 A4 Preto
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_preto_4.png'), download_file_path('cartaz_preto_4.pdf')
+            h5.regular.mt0.mb2.gray Cartaz 04 A4 Preto
+          .col.col-6.md-col-4.lg-col-2
+            = link_to image_tag('cartaz_preto_5.png'), download_file_path('cartaz_preto_5.pdf')
+            h5.regular.mt0.mb2.gray.mb4 Cartaz 05 A4 Preto
+          .col.lg-col-1.lg-show &nbsp;
+
+
+    #banners.remodal data-remodal-id="banners"
+      .container
+        .col-12.popup-header.bg-blue
+          button.remodal-close data-remodal-action="close"
+          = image_tag('header-banners.png', class: 'mt1')
+        .col-10.md-col-8.lg-col-6.mx-auto
+          h1.mt4.mb0.center BANNERS WEB
+          h4.cta.gray.mt0.mb2.center Clique no seu banner favorito para baixá-lo
+
+        .col-11.md-col-9.mx-auto.mxn2
+          .col.col-12.md-col-6.px2
+            = link_to image_tag('banner1.png'), download_file_path('bannerweb_300x250_internetnaescola_v1.gif')
+            h5.regular.mt0.mb2.gray Banner 01 - 300x250px
+          .col.col-12.md-col-6.px2
+            = link_to image_tag('banner2.png'), download_file_path('bannerweb_300x250_internetnaescola_v2.gif')
+            h5.regular.mt0.mb2.gray Banner 02 - 300x250px
+          .col.col-12.px2
+            = link_to image_tag('banner3.png'), download_file_path('bannerweb_728x90_internetnaescola_v1.gif')
+            h5.regular.mt0.mb2.gray Banner 03 - 728x90px
+          .col.col-12.px2
+            = link_to image_tag('banner4.png'), download_file_path('bannerweb_728x90_internetnaescola_v2.gif')
+            h5.regular.mt0.mb2.gray Banner 04 - 728x90px
+          .col-8.mx-auto.px2
+            = link_to image_tag('banner5.png'), download_file_path('bannerweb_468x60_internetnaescola_v1.gif')
+            h5.regular.mt0.mb2.gray Banner 05 - 468x60px
+          .col-8.mx-auto.px2
+            = link_to image_tag('banner6.png'), download_file_path('bannerweb_468x60_internetnaescola_v2.gif')
+            h5.regular.mt0.mb2.gray.mb4 Banner 06 - 468x60px
+
+    #adesivos.remodal data-remodal-id="adesivos"
+      .container
+        .col-12.popup-header.bg-blue
+          button.remodal-close data-remodal-action="close"
+          = image_tag('header-adesivos.png', class: 'mt1')
+        .col-10.md-col-8.lg-col-6.mx-auto
+          h1.mt4.mb0.center ADESIVOS
+          h4.cta.gray.mt0.mb2.center Clique no seu adesivo favorito para baixá-lo
+
+        .col-11.mx-auto.mxn2
+          .col.col-12.md-col-4.px2
+            = link_to image_tag('adesivo_vermelho.png'), download_file_path('adesivo_vermelho_internetnaescola.pdf')
+            h5.regular.mt0.mb2.gray Adesivo 01 Vermelho
+          .col.col-12.md-col-4.px2
+            = link_to image_tag('adesivo_azul.png'), download_file_path('adesivo_azul_internetnaescola.pdf')
+            h5.regular.mt0.mb2.gray Adesivo 02 Azul
+          .col.col-12.md-col-4.px2
+            = link_to image_tag('adesivo_branco.png'), download_file_path('adesivo_branco_internetnaescola.pdf')
+            h5.regular.mt0.mb2.gray.mb4 Adesivo 03 Branco
