@@ -51,7 +51,7 @@
         = render 'app_mailer/email_message'
 
         .center
-          = link_to 'QUERO ENVIAR', '#', class: ['btn', 'btn-primary', 'rounded', 'py1'], data: { 'remodal-confirm': true }
+          = link_to 'QUERO ENVIAR', '#pedido', class: ['btn', 'btn-primary', 'rounded', 'py1'], data: { 'remodal-action': 'close' }
 
   #compartilhe.remodal data-remodal-id="compartilhe"
     .container
