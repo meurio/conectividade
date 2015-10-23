@@ -7,12 +7,16 @@
             = image_tag('slide-8-header.png')
           .col.col-12.md-col-9.p2.center.md-left-align
             h3.inline.stroke.border.border-maroon.rounded.m0.py1.px2.maroon MISSÃO 2
-            h1.lh2.mb0.maroon TESTE A INTERNET NA SUA ESCOLA.
+            h1.lh2.mb0.maroon(title='http://www.internetnaescola.org/#teste') TESTE A INTERNET NA SUA ESCOLA.
       .col-10.md-col-8.lg-col-7.mx-auto.center
         h3.regular.maroon Faça o teste de velocidade e descubra como está a conexão da sua escola. É rápido, automático e você pode fazer muitas vezes.
       .col-12.md-col-10.mx-auto.center.responsive-embed.mb2
         .iframe-container
           iframe.fit src="http://54.207.215.75/partners/index.html?partner" width="720px" height="520px" frameborder="0"
+      .col-10.md-col-8.lg-col-7.mx-auto.center
+        h3.regular.maroon Como é feita a medição da velocidade de internet?
+        = link_to '#como-funciona-teste', class: ['gray', 'underline'] do
+          | Saiba mais.
       .col-12.md-col-10.mx-auto.center
         = link_to image_tag('slide-11-facebook.png', class: 'px2 mb2'),
         "https://www.facebook.com/dialog/feed?\
@@ -29,7 +33,7 @@
 #mapa
   .container.py4
     .col-10.md-col-8.lg-col-6.mx-auto
-      h1.white.mt0.center MAPA DA CONECTIVIDADE
+      h1.white.mt0.center(title='http://www.internetnaescola.org/#mapa') MAPA DA CONECTIVIDADE
       h2.cta.white.mb3.center Veja, por estado, as escolas que já testaram sua velocidade de conexão.
     .clearfix
       .col-10.md-col-8.mx-auto
@@ -39,3 +43,24 @@
             <a href='#'><img alt='DESAFIO DA CONECTIVIDADE ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;Mapa-TestesdeVelocidade&#47;MapadaConectividade&#47;1_rss.png' style='border: none' /></a>
           </noscript>
           <object class='tableauViz' width='100%' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Mapa-TestesdeVelocidade&#47;MapadaConectividade' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;Mapa-TestesdeVelocidade&#47;MapadaConectividade&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object>
+
+.display-none
+  #como-funciona-teste.remodal data-remodal-id="como-funciona-teste"
+    .container
+      .col-12.popup-header.bg-red
+        button.remodal-close data-remodal-action="close"
+      .col-10.mx-auto.p3.left-align
+        h3.py2 Como é feita a medição da velocidade de internet?
+
+        .border-top.border-bottom.py2.mb2
+          p Você pode estar se perguntando por que outros testes de velocidade apresentam um resultado maior do que o teste www.internetnaescola.org. A resposta é que os testes podem aferir a velocidade de modo diferente.
+
+          p Muitos testes aferem a velocidade da última milha de conexão, ou seja, se aquela que você contratou está sendo entregue. Um exemplo: “Contratei 10MEGA e medi que a velocidade que está sendo entregue é de 8MEGA”. Mas como esses MEGAS são utilizados dentro da escola?
+
+          p Bom, é isso que nós estamos tentando medir: quão veloz é a conexão quando um usuário está acessando a Internet. Nosso teste avalia qual a velocidade da sua internet para acessar os conteúdos disponíveis online. E isso depende tanto de onde está armazenado este conteúdo (servidores) quanto do número de usuários conectados na rede ao mesmo tempo que você.
+
+          p O resultado do teste de velocidade pode variar dependendo do número de pessoas que estão conectadas naquela internet no momento em que você está realizando o teste. Essa é uma medida mais real, uma vez que a conexão de internet de uma escola varia ao longo do dia de acordo com o número de alunos e professores que estão nela conectados.
+
+          p Agora você já sabe: estamos medindo a sua experiência em navegar pela internet, pois é assim que funciona na maioria das escolas: compartilhamos a conexão. Com isso, buscamos uma medida mais real de qual velocidade você tem disponível.
+
+          p Entendeu a importância? Agora complete os 10 testes e convide outras escolas a fazerem o mesmo!

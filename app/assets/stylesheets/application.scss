@@ -68,7 +68,7 @@ $slick-dot-size: $h4;
 .stroke { border-width: 5px; }
 
 /* Remodal */
-.remodal { padding: 0; }
+.remodal { padding: 0; max-width: 960px; }
 .remodal-close {
   color: white;
   left: auto;
