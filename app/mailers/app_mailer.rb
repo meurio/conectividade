@@ -6,6 +6,7 @@ class AppMailer < ActionMailer::Base
 
   def include_signature
     attachments.inline['assinatura-email-gut.png'] = File.read("#{Rails.root}/app/assets/images/assinatura-email-gut.png")
+    attachments.inline['header-dia-da-conectividade.png'] = File.read("#{Rails.root}/app/assets/images/header-dia-da-conectividade.png")
   end
 
   def thanks message
