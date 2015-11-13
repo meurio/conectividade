@@ -9,7 +9,7 @@
         .items-secondary
           h3.col-10.mx-auto.mt0.mb1 Cartazes
         .items-terciary.mb1
-          p.col-10.md-col-8.mx-auto.gray Pra você pendurar na sua escola, bairro ou cidade
+          p.col-10.mx-auto.gray Pra você pendurar na sua escola, bairro ou cidade
         = link_to 'Ver todos', '#cartazes', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
         .md-hide.py3
       .col.col-12.md-col-3.p2.center
@@ -17,7 +17,7 @@
         .items-secondary
           h3.col-10.mx-auto.mt0.mb1 Banners web
         .items-terciary.mb1
-          p.col-10.md-col-8.mx-auto.gray Pra você que tem um site e quer apoiar a campanha
+          p.col-10.mx-auto.gray Pra você que tem um site e quer apoiar a campanha
         = link_to 'Ver todos', '#banners', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
         .md-hide.py3
       .col.col-12.md-col-3.p2.center
@@ -25,19 +25,17 @@
         .items-secondary
           h3.col-10.mx-auto.mt0.mb1 Adesivos
         .items-terciary.mb1
-          p.col-10.md-col-8.mx-auto.gray Pra você customizar tudo o que é objeto
+          p.col-10.mx-auto.gray Pra você colar por aí a mensagem da mobilização
         = link_to 'Ver todos', '#adesivos', class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue', 'smooth']
         .md-hide.py3
       .col.col-12.md-col-3.p2.center
-        .col-5.mx-auto.items= image_tag('slide-12-4.png')
+        .col-6.mx-auto.items= image_tag('slide-12-4.png', class: 'py2', style: 'margin-top: 10px;')
         .items-secondary
           h3.col-10.mx-auto.mt0.mb1 Plano Técnico
         .items-terciary.mb1
-          p.col-10.md-col-8.mx-auto.gray Documento que aponta os possíveis caminhos
-        = link_to image_tag('button-baixe-aqui.png'), download_file_path('sumario-escolas-conectadas.pdf')
+          p.col-10.mx-auto.gray Documento que aponta os possíveis caminhos
+        = link_to 'Baixe aqui', download_file_path('sumario-escolas-conectadas.pdf'), class: ['btn', 'btn-primary', 'rounded', 'col-6', 'py1', 'bg-blue']
         .md-hide.py3
-
-            = link_to image_tag('button-baixe-aqui.png'), download_file_path('sumario-escolas-conectadas.pdf')
   .display-none
     #cartazes.remodal data-remodal-id="cartazes"
       .container
